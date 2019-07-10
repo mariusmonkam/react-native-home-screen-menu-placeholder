@@ -1,0 +1,43 @@
+import React,{Component} from 'react'
+import {
+  View,
+  Image,
+  StyleSheet,
+} from 'react-native'
+
+
+export default class MenuItem extends Component{
+  
+  render(){
+    return(
+      <View style= {styles.menuitem}>
+        <Image source={this.props.itemImage}
+         style={styles.image}
+         />
+        
+      </View>
+    )
+  }
+}
+
+
+const styles = StyleSheet.create({
+  menuitem:{
+    width:'33.3333%',
+    height:'50%' ,
+    padding:28,
+    
+
+  },
+  image:{
+    width:'100%',
+    height:'100%',
+    position:'relative',
+    opacity:0.8,
+    borderColor:'#fff',
+    borderWidth: 3,
+  },
+  textMenu:{
+    position:'absolute'
+  }
+})
